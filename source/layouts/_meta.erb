@@ -1,0 +1,10 @@
+<meta charset='utf-8'>
+<meta name='description' content='<%= current_page.data.description %>'>
+<meta name='keywords' content='<%= current_page.data.keywords %>'>
+<meta name='author' content='<%= settings.author %>'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title><%= current_page.data.title ? "#{settings.title}: #{current_page.data.title}" : settings.title %></title>
+<link rel='icon' type='image/png' href='/images/favicon.png' />
+<link rel='apple-touch-icon-precomposed' href='/images/apple-touch-icon.png'/>
+<%= stylesheet_link_tag 'all' %>
+<%= javascript_include_tag 'all' %>
