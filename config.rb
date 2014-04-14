@@ -1,8 +1,7 @@
 set :title, "Ruthless Middleman Template"
 set :author, "Daniel Clelland"
-set :email, "daniel@neighbrhood.co.nz"
-set :twitter, "http://twitter.com/zeptosteradian"
-set :facebook, "https://www.facebook.com/daniel.clelland"
+
+# Global variables go here
 
 activate :automatic_image_sizes
 activate :directory_indexes
@@ -18,4 +17,12 @@ end
 configure :build do
   activate :minify_css
   activate :minify_javascript
+end
+
+activate :deploy do |deploy|
+  deploy.method   = :rsync
+  deploy.host     = "YOUR_HOST"
+  deploy.user     = "YOUR_USERNAME"
+  deploy.path     = "YOUR_PATH"
+  deploy.clean    = true
 end
